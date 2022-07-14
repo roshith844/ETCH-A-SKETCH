@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./style.css">
+     <title>ETCH A SCHETCH</title>
+</head>
+<body>
+     <div id="container"></div>
+     <script>
+          let i=0, n=16;
+container.innerHTML = 
+`<div class="row">${'<div class="cell"></div>'.repeat(n)}</div>`
+    .repeat(n).replace(/X/g,_=> (i++).toString(n) );
+</script>
+
+     </script>
+     
+</body>
+</html>
