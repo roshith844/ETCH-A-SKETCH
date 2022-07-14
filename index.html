@@ -8,15 +8,22 @@
      <title>ETCH A SCHETCH</title>
 </head>
 <body>
-     <div id="container"></div>
+     <section id="container"></section>
      <script>
           let i=0, n=16;
 container.innerHTML = 
-`<div class="row">${'<div class="cell"></div>'.repeat(n)}</div>`
+`<section class="row">${'<div class="cell"></div>'.repeat(n)}</section>`
     .repeat(n).replace(/X/g,_=> (i++).toString(n) );
-</script>
 
-     </script>
+    const cells=document.querySelectorAll('div');
+    
+    cells.forEach((div)=>{
+     div.addEventListener('mouseover',()=>{
+          div.setAttribute('style', 'color: blue; background: blue;');
+     })
+    })
+
+</script>
      
 </body>
 </html>
