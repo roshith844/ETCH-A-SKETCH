@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +9,36 @@
      <title>ETCH A SCHETCH</title>
 </head>
 <body>
-     <button id="start">Restart</button>
+     <button onclick="startButton()" id="start">start/Restart</button>
      <section id="container"></section>
      <script>
-          let n= window.prompt("enter div number:",'')
-          let i=0;
-container.innerHTML = 
-`<section class="row">${'<div class="cell"></div>'.repeat(n)}</section>`
-    .repeat(n).replace(/X/g,_=> (i++).toString(n) );
+          let defaultn = 16;
+          createGrid(defaultn);
+          function startButton() {
+               let n = window.prompt("enter div number(1-100):", '')
+               if(n<101){
+                    container.innerHTML = '';
+                    createGrid(n)
+               }else{
+                    alert("value must be less than 100. Try Again!")
+               }  
+          }
+          function createGrid(n) {
+               let i = 0;
+               container.innerHTML =
+                    `<section class="row">${'<div class="cell"></div>'.repeat(n)}</section>`
+                         .repeat(n).replace(/X/g, _ => (i++).toString(n));
 
-    const cells=document.querySelectorAll('div');
+               const cells = document.querySelectorAll('div');
 
-    cells.forEach((div)=>{
-     div.addEventListener('mouseover',()=>{
-          div.setAttribute('style', 'color: blue; background: blue;');
-     })
-    })
+               cells.forEach((div) => {
+                    div.addEventListener('mouseover', () => {
+                         div.setAttribute('style', 'color: blue; background: blue;');
+                    })
+               })
+          }
+     </script>
 
-</script>
-     
 </body>
+
 </html>

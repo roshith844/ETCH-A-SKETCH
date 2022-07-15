@@ -1,9 +1,29 @@
-.row { display: flex; 
-     font-size: 9.5px;
-      text-align: center;
-       color: red 
-     }
-.cell { width: 10px; 
-     height: 10px;
-      border: 1px solid black;
-     }
+* {
+     box-sizing: border-box;
+}
+
+.row {
+     flex: 1;
+     height: 480px;
+     width: 50px;
+     padding: 0px;
+     margin: 0px;
+     display: flex;
+     flex-direction: column;
+}
+
+.cell {
+     flex: 1;
+     border: 1px solid black;
+     padding: 0px;
+     margin: 0px;
+}
+
+#container {
+     display: flex;
+     flex-direction: row;
+     width: 480px;
+     height: 480px;
+     padding: 0px;
+     margin: 0px;
+}
