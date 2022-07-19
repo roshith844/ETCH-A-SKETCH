@@ -1,5 +1,6 @@
 * {
      box-sizing: border-box;
+     
 }
 
 .row {
@@ -14,9 +15,15 @@
 
 .cell {
      flex: 1;
-     border: 1px solid black;
      padding: 0px;
      margin: 0px;
+}
+.black{
+     background-color: black;
+     
+}
+#erase{
+     background-color: white;
 }
 
 #container {
@@ -26,4 +33,5 @@
      height: 480px;
      padding: 0px;
      margin: 0px;
+     border: solid black 1px;
 }
