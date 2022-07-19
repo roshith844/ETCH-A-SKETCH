@@ -1,6 +1,17 @@
 * {
      box-sizing: border-box;
-     
+
+}
+
+/* For Grid */
+#container {
+     display: flex;
+     flex-direction: row;
+     width: 480px;
+     height: 480px;
+     padding: 0px;
+     margin: 0px;
+     border: solid black 1px;
 }
 
 .row {
@@ -18,49 +29,49 @@
      padding: 0px;
      margin: 0px;
 }
-#black{
+
+/* For Pen Mode */
+#black {
      background-color: black;
-     
-}
-.black10{
-     background-color: rgb(0,0,0,.10);
-}
-.black20{
-     background-color: rgb(0,0,0,.20);
-}
-.black30{
-     background-color: rgb(0,0,0,.30);
-}
-.black40{
-     background-color: rgb(0,0,0,.40);
-}
-.black50{
-     background-color: rgb(0,0,0,.50);
-}
-.black60{
-     background-color: rgb(0,0,0,.60);
-}
-.black70{
-     background-color: rgb(0,0,0,.70);
-}
-.black80{
-     background-color: rgb(0,0,0,.80);
-}
-.black90{
-     background-color: rgb(0,0,0,.90);
-}
-.black100{
-     background-color: rgb(0,0,0,1);
-
-
 }
 
-#container {
-     display: flex;
-     flex-direction: row;
-     width: 480px;
-     height: 480px;
-     padding: 0px;
-     margin: 0px;
-     border: solid black 1px;
+/* for Pencil Mode */
+.black10 {
+     background-color: rgb(0, 0, 0, .10);
+}
+
+.black20 {
+     background-color: rgb(0, 0, 0, .20);
+}
+
+.black30 {
+     background-color: rgb(0, 0, 0, .30);
+}
+
+.black40 {
+     background-color: rgb(0, 0, 0, .40);
+}
+
+.black50 {
+     background-color: rgb(0, 0, 0, .50);
+}
+
+.black60 {
+     background-color: rgb(0, 0, 0, .60);
+}
+
+.black70 {
+     background-color: rgb(0, 0, 0, .70);
+}
+
+.black80 {
+     background-color: rgb(0, 0, 0, .80);
+}
+
+.black90 {
+     background-color: rgb(0, 0, 0, .90);
+}
+
+.black100 {
+     background-color: rgb(0, 0, 0, 1);
 }
