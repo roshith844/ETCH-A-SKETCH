@@ -10,8 +10,12 @@
 </head>
 
 <body>
-     <button onclick="startButton()" id="start">start/Restart</button>
+     <button onclick="startButton()" id="start"> start/Restart</button>
+     <button onclick="drawBlack()">Pen Mode</button>
+     <button onclick="drawRandom()">random Mode</button>
+     <button onclick="drawPenc">Pencil Mode</button>
      <section id="container"></section>
+    
      <script>
 
           let defaultn = 16;
@@ -20,7 +24,8 @@
                let n = window.prompt("enter div number(1-100):", '')
                if (n < 101) {
                     container.innerHTML = '';
-                    createGrid(n)
+                    createGrid(n) 
+                    
 
                } else {
                     alert("value must be less than 100. Try Again!")
@@ -31,14 +36,35 @@
                container.innerHTML =
                     `<section class="row">${"<div class='cell'></div>".repeat(n)}</section>`
                          .repeat(n).replace(/X/g, _ => (i++).toString(n));
-               const cells = document.querySelectorAll('div');
+          }
+     function drawBlack(){
+          const cells = document.querySelectorAll('div');
                cells.forEach((div) => {
                     div.addEventListener('mouseover', () => {
                          div.classList.add('black');
                     });
                })
-          }
+     }
+     function drawRandom(){
+          const cells = document.querySelectorAll('div');
+               cells.forEach((div) => {
+                    div.addEventListener('mouseover', () => {
+                         let cellColour=createRandomRGB();
+                         div.classList.remove('black');
+                         div.style.backgroundColor=cellColour
+                    });
+               })
 
+
+         // 
+     }
+     function createRandomRGB(){
+          let num = Math.round(0xffffff * Math.random());
+          let r = num >> 16;
+          let g = num >> 8 & 255;
+          let b = num & 255;
+  return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+     }
      </script>
 
 </body>
